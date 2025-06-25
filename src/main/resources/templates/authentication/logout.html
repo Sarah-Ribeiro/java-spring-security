@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{template.html}">
+<head>
+    <meta charset="UTF-8">
+    <title>Confirmar Logout</title>
+</head>
+<body>
+<div layout:fragment="conteudo">
+    <main class="container">
+        <section class="card form-card">
+            <h2 class="title">Tem certeza que quer sair do site?</h2>
+            <form method="post" th:action="@{/logout}">
+                <a href="index.html" th:href="@{/}" class="btn btn-default">Voltar</a>
+                <button class="btn btn-danger">SAIR</button>
+            </form>
+        </section>
+    </main>
+</div>
+</body>
+</html>

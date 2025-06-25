@@ -6,9 +6,14 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class LoginController {
 
-    @GetMapping
+    @GetMapping("/login")
     public String loadPageList() {
         return "authentication/login";
+    }
+
+    @GetMapping("/logout")
+    public String loadPageLogout() {
+        return "authentication/logout";
     }
 
 }
